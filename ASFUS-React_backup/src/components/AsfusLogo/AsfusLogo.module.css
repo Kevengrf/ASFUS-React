@@ -1,0 +1,82 @@
+/* FILE: src/components/AsfusLogo.module.css */
+
+/* Container principal da logo para alinhar tudo */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre o símbolo e o texto */
+  text-decoration: none; /* Remove sublinhado se usado como link */
+}
+
+/* Container para as formas, controla o tamanho e o overflow */
+.logoShapes {
+  position: relative;
+  width: 40px;
+  height: 50px;
+  overflow: hidden; /* Essencial para o efeito de "surgir" */
+}
+
+/* Estilo base para as duas formas (as 'ondas') */
+.shape {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  background-color: var(--primary-color, #009688); /* Usa a cor primária, com um fallback */
+}
+
+/* Forma de cima */
+.top {
+  top: 0;
+  border-radius: 20px 20px 0 10px;
+  animation: slideInTop 0.8s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  transform: translateY(-100%); /* Posição inicial fora da tela */
+}
+
+/* Forma de baixo */
+.bottom {
+  bottom: 0;
+  border-radius: 0 10px 20px 20px;
+  animation: slideInBottom 0.8s 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  transform: translateY(100%); /* Posição inicial fora da tela */
+}
+
+/* Texto "ASFUS" */
+.logoText {
+  font-family: var(--font-family-base, 'Roboto', sans-serif);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--dark-text, #333);
+  opacity: 0; /* Começa invisível */
+  animation: fadeInText 0.7s 0.8s ease-in-out forwards;
+}
+
+/* Animações com @keyframes */
+
+ @keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+ @keyframes slideInBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+ @keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

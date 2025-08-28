@@ -1,0 +1,254 @@
+/* src/pages/RegisterPage/RegisterPage.module.css */
+.pageWrapper {
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--grey-bg);
+}
+
+.registerCard {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--light-bg);
+  padding: 2.5rem 3rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+.title {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.subtitle {
+  margin-bottom: 2.5rem;
+  color: var(--text-color-light);
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.fieldset {
+  border: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.fieldset legend {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  margin-bottom: 1.5rem;
+  width: 100%;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.formGrid input {
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: var(--light-bg);
+}
+
+.formGrid input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.1);
+}
+
+.formGrid input::placeholder {
+  color: var(--text-color-light);
+}
+
+.dependenteBox {
+  background-color: var(--grey-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.dependenteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.dependenteHeader h4 {
+  color: var(--dark-text);
+  font-weight: 500;
+}
+
+.removeButton {
+  background: transparent;
+  border: none;
+  color: var(--danger-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.2rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.removeButton:hover {
+  background-color: #f8d7da;
+}
+
+.addButton {
+  background-color: transparent;
+  border: 2px dashed var(--primary-color);
+  color: var(--primary-color);
+  width: 100%;
+  padding: 0.8rem;
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.addButton:hover {
+  background-color: rgba(0, 150, 136, 0.05);
+  border-style: solid;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submitButton:hover {
+  background-color: var(--secondary-color);
+}
+
+.submitButton:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+.alertError, .alertSuccess {
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.alertError {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.alertSuccess {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .registerCard {
+    padding: 2rem;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .fieldset legend {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageWrapper {
+    padding: 1rem;
+  }
+  .registerCard {
+    padding: 1.5rem;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Test Login Section */
+.testLoginSection {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.testLoginSection h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.8rem;
+}
+
+.testLoginSection p {
+  color: var(--text-color-light);
+  margin-bottom: 1.5rem;
+}
+
+.testLoginButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.testButton {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.testButton:hover {
+  background-color: var(--secondary-color);
+}
+
+.adminTestButton {
+  background-color: var(--dark-grey);
+}
+
+.adminTestButton:hover {
+  background-color: var(--text-color-light);
+}

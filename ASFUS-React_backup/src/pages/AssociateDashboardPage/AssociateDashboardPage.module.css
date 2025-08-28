@@ -1,0 +1,174 @@
+.dashboardContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboardContainer h1 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section {
+  background-color: var(--light-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.form h3 {
+  color: var(--dark-text);
+  margin-bottom: 1rem;
+}
+
+.form input {
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.formActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.button {
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.button[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  border: none;
+}
+
+.cancelButton {
+  background-color: var(--grey-bg);
+  color: var(--dark-text);
+  border: 1px solid var(--border-color);
+}
+
+.dependentesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.dependenteCard {
+  background-color: var(--grey-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.dependenteCard p {
+  margin-bottom: 0.5rem;
+  color: var(--dark-text);
+}
+
+.dependenteCard strong {
+  color: var(--secondary-color);
+}
+
+.cardActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+
+.editButton {
+  background-color: #ffc107; /* Yellow */
+  color: var(--dark-text);
+  border: none;
+}
+
+.deleteButton {
+  background-color: var(--danger-color); /* Red */
+  color: var(--light-text);
+  border: none;
+}
+
+.errorMessage {
+  color: var(--danger-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    padding: 1.5rem;
+  }
+  .section {
+    padding: 1.5rem;
+  }
+  .dashboardContainer h1 {
+    font-size: 2rem;
+  }
+  .section h2 {
+    font-size: 1.5rem;
+  }
+  .form input {
+    font-size: 0.9rem;
+  }
+  .button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardContainer {
+    padding: 1rem;
+  }
+  .section {
+    padding: 1rem;
+  }
+  .dashboardContainer h1 {
+    font-size: 1.8rem;
+  }
+  .section h2 {
+    font-size: 1.3rem;
+  }
+  .form input {
+    font-size: 0.85rem;
+  }
+  .button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .formActions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .button[type="submit"], .cancelButton {
+    width: 100%;
+  }
+}

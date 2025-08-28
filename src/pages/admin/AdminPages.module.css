@@ -1,0 +1,378 @@
+
+/* src/pages/admin/AdminPages.module.css */
+.adminContainer {
+    padding: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: var(--shadow-md);
+}
+
+.table th, .table td {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    text-align: left;
+}
+
+.table th {
+    background-color: var(--grey-bg);
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.approveButton {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+.declineButton {
+    background-color: var(--danger-color);
+    color: var(--light-text);
+}
+
+.errorMessage {
+    color: var(--danger-color);
+}
+
+.form {
+    margin-bottom: 2rem;
+}
+
+.form input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.fileInputContainer {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.fileInput {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.fileInputLabel {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--grey-bg);
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-color-light);
+}
+
+.fileInputLabel:hover {
+    border-color: var(--primary-color);
+    background: rgba(0, 150, 136, 0.05);
+}
+
+.photoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.photoCard {
+    border: 1px solid var(--border-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+.photoCard img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+/* New styles for approval management */
+.pendingUsersGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.userCard {
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.userCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.userCard:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.userAvatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.userAvatar span {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.userInfo h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.userDetails {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.detailItem {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--dark-text);
+}
+
+.detailIcon {
+    font-size: 1.2rem;
+    width: 20px;
+}
+
+.userActions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.actionButton {
+    flex: 1;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.actionButton:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.approveButton {
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+}
+
+.approveButton:hover {
+    background: linear-gradient(135deg, #218838, #1ea085);
+}
+
+.declineButton {
+    background: linear-gradient(135deg, #dc3545, #e74c3c);
+    color: white;
+}
+
+.declineButton:hover {
+    background: linear-gradient(135deg, #c82333, #c0392b);
+}
+
+.buttonIcon {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Styles for home content management */
+.contentForm {
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.contentForm h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.formRow {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.select, .input, .textarea {
+    padding: 0.8rem;
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.select:focus, .input:focus, .textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.1);
+}
+
+.select {
+    flex: 1;
+}
+
+.input, .textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contentSections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contentSection h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contentGrid {
+    display: grid;
+    gap: 1rem;
+}
+
+.contentCard {
+    background: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.contentCard.high {
+    border-left: 4px solid #dc3545;
+}
+
+.contentCard.normal {
+    border-left: 4px solid #ffc107;
+}
+
+.contentCard.low {
+    border-left: 4px solid #28a745;
+}
+
+.contentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.priorityBadge {
+    background: var(--primary-color);
+    color: var(--light-text);
+    padding: 0.3rem 0.8rem;
+    border-radius: var(--border-radius);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.deleteButton {
+    background: transparent;
+    border: none;
+    color: var(--danger-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deleteButton:hover {
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.contentCard h3 {
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+}
+
+.contentCard p {
+    color: var(--text-color-light);
+    line-height: 1.5;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contentSections {
+        grid-template-columns: 1fr;
+    }
+    
+    .formRow {
+        flex-direction: column;
+    }
+    
+    .pendingUsersGrid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,73 @@
+/* src/components/Footer/Footer.module.css */
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--light-text);
+  padding: 1.5rem 0; /* Reduced padding */
+  margin-top: auto;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: center; /* Center content */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Reduced padding */
+  text-align: center;
+}
+
+.footerSection {
+  flex: 0 0 auto; /* Don't grow, don't shrink, base on content */
+  margin: 0.5rem 1.5rem; /* Reduced margin */
+  min-width: unset; /* Remove min-width */
+}
+
+.footerSection h4 {
+  margin-bottom: 0.5rem; /* Reduced margin */
+  color: var(--primary-color);
+  border-bottom: none; /* Remove border */
+  padding-bottom: 0; /* Remove padding */
+  display: block; /* Make it a block element */
+}
+
+.footerSection p {
+  margin-bottom: 0; /* Remove margin */
+  font-size: 0.85rem; /* Smaller font size */
+}
+
+.socialLinks a {
+  color: var(--light-text);
+  margin: 0 0.4rem; /* Reduced margin */
+  text-decoration: none;
+  font-size: 0.85rem; /* Smaller font size */
+}
+
+.socialLinks a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.footerBottom {
+  text-align: center;
+  padding: 0.8rem; /* Reduced padding */
+  margin-top: 1rem; /* Reduced margin */
+  background-color: #004a7a; /* Um tom mais escuro do secondary-color */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footerBottom p {
+  font-size: 0.8rem; /* Smaller font size */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerSection {
+    margin-bottom: 1rem; /* Reduced margin */
+  }
+}

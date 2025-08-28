@@ -1,0 +1,102 @@
+/* src/index.css */
+
+/* 1. Importar Tipografia */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* 2. Definir Variáveis Globais */
+:root {
+  --primary-color: #009688; /* Tom de verde/teal inspirado em Suape */
+  --secondary-color: #005A8D; /* Tom de azul para acentos */
+  --dark-text: #333333;
+  --light-text: #FFFFFF;
+  --light-bg: #FFFFFF;
+  --grey-bg: #f5f7fa;
+  --border-color: #e0e0e0;
+  --font-family-base: 'Roboto', sans-serif;
+  --shadow-md: 0 4px 8px rgba(0,0,0,0.07);
+  --border-radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Aplicar Estilos Base */
+body {
+  font-family: var(--font-family-base);
+  color: var(--dark-text);
+  background-color: var(--grey-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  background-color: var(--light-bg);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.25);
+}
+
+/* Adicionando estilos responsivos globais */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+  button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  input, textarea, select {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  input, textarea, select {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+}

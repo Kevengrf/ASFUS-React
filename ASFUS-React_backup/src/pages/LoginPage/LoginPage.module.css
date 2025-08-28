@@ -1,0 +1,161 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--grey-bg);
+  }
+  
+  .loginBox {
+    background: var(--light-bg);
+    padding: 3rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-xl);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+  }
+  
+  .title {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: var(--text-color-light);
+    margin-bottom: 2rem;
+  }
+  
+  .errorMessage {
+    background-color: #ffebee; /* Red background */
+    color: #c62828; /* Dark red text */
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 1.5rem;
+    border: 1px solid #ef9a9a; /* Light red border */
+  }
+  
+  .inputGroup {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  .inputGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark-text);
+  }
+  
+  .inputGroup input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+  }
+  
+  .passwordWrapper {
+    position: relative;
+  }
+  
+  .passwordWrapper input {
+    padding-right: 3rem; /* Espaço para o ícone */
+  }
+  
+  .eyeIcon {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-color-light);
+  }
+  
+  .loginButton {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .loginButton:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .loginButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .demoButton {
+    margin-top: 1rem;
+    background-color: var(--secondary-color);
+  }
+
+/* Test Login Section */
+.testLoginSection {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.testLoginSection h3 {
+  color: var(--secondary-color);
+  margin-bottom: 0.8rem;
+}
+
+.testLoginSection p {
+  color: var(--text-color-light);
+  margin-bottom: 1.5rem;
+}
+
+.testLoginButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.testButton {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.testButton:hover {
+  background-color: var(--secondary-color);
+}
+
+.adminTestButton {
+  background-color: var(--dark-grey);
+}
+
+.adminTestButton:hover {
+  background-color: var(--text-color-light);
+}
+
+@media (max-width: 480px) {
+  .loginBox {
+    padding: 1.5rem; /* Reduce padding on small screens */
+  }
+  .title {
+    font-size: 2rem; /* Adjust title size */
+  }
+  .subtitle {
+    font-size: 0.9rem; /* Adjust subtitle size */
+  }
+}
